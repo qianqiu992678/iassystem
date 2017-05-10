@@ -1,0 +1,21 @@
+@import "variables.less";
+@import "gs.less";
+.ias{
+  font-size: @g-font-size;
+  width:100px;
+  height:100px;
+  background: @theme-color;
+  border: 2px solid @theme-dark;
+  //带参数的样式混入测试
+  .fontSize(@fs:@g-font-size){//带默认值
+    font-size: @fs;
+  }
+  .son{
+    .fontSize(@g-font-size);
+  }
+  .second{
+    .fontSize(@double-g-font-size);
+  }
+}
+
+
