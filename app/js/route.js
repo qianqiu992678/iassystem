@@ -12,14 +12,6 @@ var iasApp = angular.module('iasApp', ['ng', 'ui.router']).config(['$stateProvid
     }).state('test.test1', {
         url: '/test1',
         templateUrl: 'app/templates/test/test1.html',
-        controller: 'test1Ctrl',
-        resolve: {
-            deps: ['uiLoad', '$ocLazyLoad', function (uiLoad, $ocLazyLoad) {
-                return uiLoad.load('app/js/controllers/test1Ctrl.js').then(function () {
-                    return $ocLazyLoad.load('toaster');
-                });
-                console.log('runing');
-            }]
-        }
+        controller: 'test1Ctrl'
     });
 }]);

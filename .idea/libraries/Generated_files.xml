@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/app/js/index-compiled.js" />
+        <item url="file://$PROJECT_DIR$/app/js/controllers/test1Ctrl-compiled-compiled.js" />
+        <item url="file://$PROJECT_DIR$/app/js/controllers/test1Ctrl-compiled.js" />
+        <item url="file://$PROJECT_DIR$/app/_js/route-compiled.js" />
+        <item url="file://$PROJECT_DIR$/gulpfile-compiled.js" />
+        <item url="file://$PROJECT_DIR$/app/_js/controllers/test1Ctrl-compiled.js" />
+        <item url="file://$PROJECT_DIR$/app/js/route-compiled-compiled.js" />
+        <item url="file://$PROJECT_DIR$/app/js/route-compiled.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/js/index-compiled.js" />
+      <root url="file://$PROJECT_DIR$/app/js/controllers/test1Ctrl-compiled-compiled.js" />
+      <root url="file://$PROJECT_DIR$/app/js/controllers/test1Ctrl-compiled.js" />
+      <root url="file://$PROJECT_DIR$/app/_js/route-compiled.js" />
+      <root url="file://$PROJECT_DIR$/gulpfile-compiled.js" />
+      <root url="file://$PROJECT_DIR$/app/_js/controllers/test1Ctrl-compiled.js" />
+      <root url="file://$PROJECT_DIR$/app/js/route-compiled-compiled.js" />
+      <root url="file://$PROJECT_DIR$/app/js/route-compiled.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
