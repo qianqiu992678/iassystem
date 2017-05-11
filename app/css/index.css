@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: #aaa;
+}
+.ias {
+  font-size: 14px;
+  width: 100px;
+  height: 100px;
+  background: #033FA1;
+  border: 2px solid #022b6f;
+}
+.ias .son {
+  font-size: 14px;
+}
+.ias .second {
+  font-size: 28px;
+  padding: 3px;
+}

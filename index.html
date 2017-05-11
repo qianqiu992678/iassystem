@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="iasApp">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="app/css/index.css">
 </head>
 <body>
-    <div class="ias">
-        字体大小test
-        <div class="son">
-            字体大小test
-        </div>
-        <div class="second">test</div>
-    </div>
+    <div ui-view></div>
+
+    <!--<div class="ias">-->
+        <!--字体大小test-->
+        <!--<div class="son">-->
+            <!--字体大小test-->
+        <!--</div>-->
+        <!--<div class="second">test</div>-->
+    <!--</div>-->
+    <script src="app/js/index.js"></script>
+    <script src="app/js/jquery.min.js"></script>
+    <script src="app/js/angular.js"></script>
+    <script src="app/js/angular-ui-router.min.js"></script>
+    <script src="app/js/route.js"></script>
 </body>
 </html>
