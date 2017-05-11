@@ -15,6 +15,11 @@ var iasApp=angular.module('iasApp',['ng','ui.router'])
                 templateUrl:'app/templates/test/test1.html',
                 controller:'test1Ctrl'
             })
+            .state('test.test2',{
+                url:'/test2',
+                templateUrl:'app/templates/test/test2.html',
+                controller:'test2Ctrl'
+            })
     }]);
 
 
