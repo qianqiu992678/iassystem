@@ -1,0 +1,227 @@
+{
+  "PMS":[
+    {
+      "sys":"PMS Control",
+      "state":"PMSControll"
+    },
+    {
+      "sys":"PMS Single-line",
+      "state":"PMSSingleLine"
+    }
+  ],
+  "Cargo":[
+    {
+      "sys":"Ballast/DrillW.Sys",
+      "state":"BallastDrillW"
+    },
+    {
+      "sys":"Base Oil",
+      "state":"BaseOil"
+    },
+    {
+      "sys":"BHS system",
+      "state":"BHS"
+    },
+    {
+      "sys":"FW Cargo",
+      "state":"FWCargo"
+    },
+    {
+      "sys":"FO Cargo",
+      "state":"FOCargo"
+    },
+    {
+      "sys":"LFL*",
+      "state":"LFL"
+    },
+    {
+      "sys":"Liquid Mud/Brine",
+      "state":"LiquidMudBrine"
+    },
+    {
+      "sys":"Cargo Summary",
+      "state":"CargoSummary"
+    }
+  ],
+  "Engines":[
+    {
+      "sys":"Main Engine 1",
+      "state":"ME1"
+    },
+    {
+      "sys":"Main Engine 2",
+      "state":"ME2"
+    },
+    {
+      "sys":"Main Engine 3",
+      "state":"ME3"
+    },
+    {
+      "sys":"Main Engine 4",
+      "state":"ME4"
+    },
+    {
+      "sys":"LO System",
+      "state":"LO"
+    },
+    {
+      "sys":"FO System",
+      "state":"FO"
+    }
+  ],
+  "Propulsions":[
+    {
+      "sys":"Thruster Overview",
+      "state":"ThrusterOverview"
+    },
+    {
+      "sys":"Bow Thruster 1",
+      "state":"BowThruster1"
+    },
+    {
+      "sys":"Bow Thruster 2",
+      "state":"BowThruster2"
+    },
+    {
+      "sys":"Main Prop.PS",
+      "state":"MainPropPS"
+    },
+    {
+      "sys":"Main Prop.SB",
+      "state":"MainPropSB"
+    }
+  ],
+  "Cooling":[
+    {
+      "sys":"Cooling Overview",
+      "state":"CoolingOverview"
+    },
+    {
+      "sys":"SW Cooling Sys.1",
+      "state":"SWCooling1"
+    },
+    {
+      "sys":"SW Cooling Sys.2",
+      "state":"SWCooling2"
+    },
+    {
+      "sys":"FW Cooling Sys.1",
+      "state":"FWCooling1"
+    },
+    {
+      "sys":"FW Cooling Sys.2",
+      "state":"FWCooling2"
+    },
+    {
+      "sys":"FW Cooling Sys.3",
+      "state":"FWCooling3"
+    }
+  ],
+  "Misc":[
+    {
+      "sys":"Extended Alarm System",
+      "state":"ExtendedAlarm"
+    },
+    {
+      "sys":"Running Hours",
+      "state":"RunningHours"
+    },
+    {
+      "sys":"Miscellaneous",
+      "state":"Miscellaneous"
+    },
+    {
+      "sys":"EITrq Overview",
+      "state":"EITrqOverview"
+    },
+    {
+      "sys":"Bilge System",
+      "state":"Bilge"
+    },
+    {
+      "sys":"Fire Line System",
+      "state":"FireLine"
+    },
+    {
+      "sys":"Waste/Sludge",
+      "state":"WasteSludge"
+    },
+    {
+      "sys":"Hydrophore",
+      "state":"Hydrophore"
+    },
+    {
+      "sys":"Sewage Discharge",
+      "state":"SewageDischarge"
+    },
+    {
+      "sys": "Starting Air/Instr Air",
+      "state":"StartingInstrAir"
+    },
+    {
+      "sys":"Stabtank level",
+      "state":"StabtankLevel"
+    }
+  ],
+  "Trend":[
+    {
+      "sys":"Trend",
+      "state":"Trend"
+    }
+  ],
+  "IAS":[
+    {
+      "sys":"IAS Login",
+      "state":"IASLogin"
+    },
+    {
+      "sys":"IO Browser",
+      "state":"IOBrowser"
+    },
+    {
+      "sys":"Com Network",
+      "state":"ComNetwork"
+    },
+    {
+      "sys":"Com Device",
+      "state":"ComDevice"
+    },
+    {
+      "sys":"ECI-VRN-ODX",
+      "state":"ECIVRNODX"
+    },
+    {
+      "sys":"NMEA",
+      "state":"NMEA"
+    },
+    {
+      "sys":"Command Overview",
+      "state":"CommandOverview"
+    },
+    {
+      "sys":"Command Management",
+      "state":"CommandManagement"
+    },
+    {
+      "sys":"IAS Setup",
+      "state":"IASSetup"
+    },
+    {
+      "sys":"Write Disable",
+      "state":"WriteDisable"
+    },
+    {
+      "sys":"Diagnostic performance",
+      "state":"DiagnosticPerformance"
+    },
+    {
+      "sys":"Force Browser",
+      "state":"ForceBrowser"
+    },
+
+    {
+      "sys":"Task Overview",
+      "state":"TaskOverview"
+    }
+  ]
+}

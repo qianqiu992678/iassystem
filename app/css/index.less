@@ -1,21 +1,183 @@
 @import "variables.less";
 @import "gs.less";
+//.ias{
+//  font-size: @g-font-size;
+//  width:100px;
+//  height:100px;
+//  background: @theme-color;
+//  border: 2px solid @theme-dark;
+//  //带参数的样式混入测试
+//  .fontSize(@fs:@g-font-size){//带默认值
+//    font-size: @fs;
+//  }
+//  .son{
+//    .fontSize(@g-font-size);
+//  }
+//  .second{
+//    .fontSize(@double-g-font-size);
+//    padding:3px;
+//  }
+//}
 .ias{
-  font-size: @g-font-size;
-  width:100px;
-  height:100px;
-  background: @theme-color;
-  border: 2px solid @theme-dark;
-  //带参数的样式混入测试
-  .fontSize(@fs:@g-font-size){//带默认值
-    font-size: @fs;
+  width:@full-width;
+  height:@full-height;
+  background-color:@theme-color;
+  .head{
+    .header-border{
+      border:1px solid #606060;
+    }
+    width:100%;
+    height:50px;
+    .headerItem{
+      float: left;
+    }
+    .logo{
+      width:0.11*@full-width;
+      padding-top:14px ;
+      text-align: center;
+    }
+    .displaybar-menu{
+      width:0.6*@full-width;
+      .displaybar{
+        height:22px;
+        background-color:#000;
+        .header-border;
+        margin-bottom: 3px;
+        padding-left:10px;
+        color:@active-alarm-color
+      }
+      .category-item{
+        float: left;
+        position:relative;
+        height:24px;
+        .header-border;
+        width:0.6*@full-width/8;
+        text-align: center;
+        &:hover{
+          border-color:#fff;
+        }
+        .category-item-name{
+          display: block;
+          width:100%;
+        }
+        .system-items{
+          width:190px;
+          position: absolute;
+          top:110%;
+          left:0;
+          background-color:@theme-color;
+        }
+        .system-item{
+          border:2px solid transparent;
+          margin-bottom:5px;
+          padding-left:8px;
+          &:hover{
+            border-color:#fff;
+          }
+        }
+      }
+      .system-items{
+        display:none;
+        text-align: left;
+        border:2px solid #000;
+      }
+      .system-items.active{
+        display:block;
+      }
+    }
+    .alarms{
+      .header-border;
+      height:50px;
+      width:0.07*@full-width;
+      background-color:@active-alarm-color;
+      line-height: 25px;
+      .alarm-count{
+        width:70%;
+        text-align: center;
+      };
+      .alarm-select{
+        position: relative;
+        width:30%;
+        height:100%;
+        border:2px solid transparent;
+        .alarm-select-head{
+          display: inline-block;
+          width:100%;
+          height:100%;
+        }
+        &:hover{
+          border-color:#fff;
+        }
+        .alarm-items{
+          position:absolute;
+          background-color:@theme-color;
+          top:110%;
+          right:-3px;
+          width:0.07*@full-width;
+          display:none;
+          border:2px solid #000;
+          .alarm-item{
+            padding-left:8px;
+            border:1px solid transparent;
+            &:hover{
+              border-color:#fff;
+            }
+          }
+        };
+        .alarm-items.active{
+          display:block;
+        }
+      }
+    }
+    .silence{
+      .header-border;
+      padding:0 3px;
+      text-align: center;
+      height:100%;
+      width:0.07*@full-width;
+      .silence-btn{
+        height:30px;
+        line-height: 40px;
+        font-size: 16px;
+      };
+      .EB-select{
+        height:20px;
+      };
+    }
+    .time-design{
+      .td-com{
+        height:24px;
+        line-height: 24px;
+        text-align:center
+      }
+      margin-left:2px;
+      width:0.14*@full-width;
+      .system-time{
+        .header-border;
+        .td-com;
+        margin-bottom: 2px;
+
+      };
+      .design{
+        .header-border;
+        background-color:#00c000;
+        .td-com;
+      }
+    }
+
+  };
+  .main-window{
+    width:96%;
+    height:1090px;
+    margin:6px auto;
+    border:1px solid #333;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px;
+    background-color: #404040;
   }
-  .son{
-    .fontSize(@g-font-size);
-  }
-  .second{
-    .fontSize(@double-g-font-size);
-    padding:3px;
+  .foot{
+    width:100%;
+    height:60px;
   }
 }
 
