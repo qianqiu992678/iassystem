@@ -2,226 +2,226 @@
   "PMS":[
     {
       "sys":"PMS Control",
-      "state":"PMSControll"
+      "state":"PMS.PMSControll"
     },
     {
       "sys":"PMS Single-line",
-      "state":"PMSSingleLine"
+      "state":"PMS.PMSSingleLine"
     }
   ],
   "Cargo":[
     {
       "sys":"Ballast/DrillW.Sys",
-      "state":"BallastDrillW"
+      "state":"Cargo.BallastDrillW"
     },
     {
       "sys":"Base Oil",
-      "state":"BaseOil"
+      "state":"Cargo.BaseOil"
     },
     {
       "sys":"BHS system",
-      "state":"BHS"
+      "state":"Cargo.BHS"
     },
     {
       "sys":"FW Cargo",
-      "state":"FWCargo"
+      "state":"Cargo.FWCargo"
     },
     {
       "sys":"FO Cargo",
-      "state":"FOCargo"
+      "state":"Cargo.FOCargo"
     },
     {
       "sys":"LFL*",
-      "state":"LFL"
+      "state":"Cargo.LFL"
     },
     {
       "sys":"Liquid Mud/Brine",
-      "state":"LiquidMudBrine"
+      "state":"Cargo.LiquidMudBrine"
     },
     {
       "sys":"Cargo Summary",
-      "state":"CargoSummary"
+      "state":"Cargo.CargoSummary"
     }
   ],
   "Engines":[
     {
       "sys":"Main Engine 1",
-      "state":"ME1"
+      "state":"Engine.ME1"
     },
     {
       "sys":"Main Engine 2",
-      "state":"ME2"
+      "state":"Engine.ME2"
     },
     {
       "sys":"Main Engine 3",
-      "state":"ME3"
+      "state":"Engine.ME3"
     },
     {
       "sys":"Main Engine 4",
-      "state":"ME4"
+      "state":"Engine.ME4"
     },
     {
       "sys":"LO System",
-      "state":"LO"
+      "state":"Engine.LO"
     },
     {
       "sys":"FO System",
-      "state":"FO"
+      "state":"Engine.FO"
     }
   ],
   "Propulsions":[
     {
       "sys":"Thruster Overview",
-      "state":"ThrusterOverview"
+      "state":"Propulsions.ThrusterOverview"
     },
     {
       "sys":"Bow Thruster 1",
-      "state":"BowThruster1"
+      "state":"Propulsions.BowThruster1"
     },
     {
       "sys":"Bow Thruster 2",
-      "state":"BowThruster2"
+      "state":"Propulsions.BowThruster2"
     },
     {
       "sys":"Main Prop.PS",
-      "state":"MainPropPS"
+      "state":"Propulsions.MainPropPS"
     },
     {
       "sys":"Main Prop.SB",
-      "state":"MainPropSB"
+      "state":"Propulsions.MainPropSB"
     }
   ],
   "Cooling":[
     {
       "sys":"Cooling Overview",
-      "state":"CoolingOverview"
+      "state":"Cooling.CoolingOverview"
     },
     {
       "sys":"SW Cooling Sys.1",
-      "state":"SWCooling1"
+      "state":"Cooling.SWCooling1"
     },
     {
       "sys":"SW Cooling Sys.2",
-      "state":"SWCooling2"
+      "state":"Cooling.SWCooling2"
     },
     {
       "sys":"FW Cooling Sys.1",
-      "state":"FWCooling1"
+      "state":"Cooling.FWCooling1"
     },
     {
       "sys":"FW Cooling Sys.2",
-      "state":"FWCooling2"
+      "state":"Cooling.FWCooling2"
     },
     {
       "sys":"FW Cooling Sys.3",
-      "state":"FWCooling3"
+      "state":"Cooling.FWCooling3"
     }
   ],
   "Misc":[
     {
       "sys":"Extended Alarm System",
-      "state":"ExtendedAlarm"
+      "state":"Misc.ExtendedAlarm"
     },
     {
       "sys":"Running Hours",
-      "state":"RunningHours"
+      "state":"Misc.RunningHours"
     },
     {
       "sys":"Miscellaneous",
-      "state":"Miscellaneous"
+      "state":"Misc.Miscellaneous"
     },
     {
       "sys":"EITrq Overview",
-      "state":"EITrqOverview"
+      "state":"Misc.EITrqOverview"
     },
     {
       "sys":"Bilge System",
-      "state":"Bilge"
+      "state":"Misc.Bilge"
     },
     {
       "sys":"Fire Line System",
-      "state":"FireLine"
+      "state":"Misc.FireLine"
     },
     {
       "sys":"Waste/Sludge",
-      "state":"WasteSludge"
+      "state":"Misc.WasteSludge"
     },
     {
       "sys":"Hydrophore",
-      "state":"Hydrophore"
+      "state":"Misc.Hydrophore"
     },
     {
       "sys":"Sewage Discharge",
-      "state":"SewageDischarge"
+      "state":"Misc.SewageDischarge"
     },
     {
       "sys": "Starting Air/Instr Air",
-      "state":"StartingInstrAir"
+      "state":"Misc.StartingInstrAir"
     },
     {
       "sys":"Stabtank level",
-      "state":"StabtankLevel"
+      "state":"Misc.StabtankLevel"
     }
   ],
   "Trend":[
     {
       "sys":"Trend",
-      "state":"Trend"
+      "state":"Trend.Trend"
     }
   ],
   "IAS":[
     {
       "sys":"IAS Login",
-      "state":"IASLogin"
+      "state":"IAS.IASLogin"
     },
     {
       "sys":"IO Browser",
-      "state":"IOBrowser"
+      "state":"IAS.IOBrowser"
     },
     {
       "sys":"Com Network",
-      "state":"ComNetwork"
+      "state":"IAS.ComNetwork"
     },
     {
       "sys":"Com Device",
-      "state":"ComDevice"
+      "state":"IAS.ComDevice"
     },
     {
       "sys":"ECI-VRN-ODX",
-      "state":"ECIVRNODX"
+      "state":"IAS.ECIVRNODX"
     },
     {
       "sys":"NMEA",
-      "state":"NMEA"
+      "state":"IAS.NMEA"
     },
     {
       "sys":"Command Overview",
-      "state":"CommandOverview"
+      "state":"IAS.CommandOverview"
     },
     {
       "sys":"Command Management",
-      "state":"CommandManagement"
+      "state":"IAS.CommandManagement"
     },
     {
       "sys":"IAS Setup",
-      "state":"IASSetup"
+      "state":"IAS.IASSetup"
     },
     {
       "sys":"Write Disable",
-      "state":"WriteDisable"
+      "state":"IAS.WriteDisable"
     },
     {
       "sys":"Diagnostic performance",
-      "state":"DiagnosticPerformance"
+      "state":"IAS.DiagnosticPerformance"
     },
     {
       "sys":"Force Browser",
-      "state":"ForceBrowser"
+      "state":"IAS.ForceBrowser"
     },
 
     {
       "sys":"Task Overview",
-      "state":"TaskOverview"
+      "state":"IAS.TaskOverview"
     }
   ]
 }

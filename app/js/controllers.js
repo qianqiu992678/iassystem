@@ -38,6 +38,22 @@ iasApp.controller('iasCtrl', ['$scope', '$interval', function ($scope, $interval
 'use strict';
 
 /**
+ * Created by Administrator on 2017/5/13.
+ */
+iasApp.controller('PMSControllCtrl', ['$scope', function ($scope) {
+  console.log('PMSControllCtrl');
+}]);
+'use strict';
+
+/**
+ * Created by Administrator on 2017/5/13.
+ */
+iasApp.controller('PMSSingleLineCtrl', ['$scope', function ($scope) {
+  console.log('PMSSingleLineCtrl');
+}]);
+'use strict';
+
+/**
  * Created by Administrator on 2017/5/10.
  */
 iasApp.controller('test1Ctrl', ['$scope', function ($scope) {

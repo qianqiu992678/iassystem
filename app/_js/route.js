@@ -6,22 +6,17 @@
 var iasApp=angular.module('iasApp',['ng','ui.router'])
     .config(['$stateProvider','$urlRouterProvider',function ($stateProvider,$urlRouterProvider) {
         $stateProvider
-            .state('test',{
+            .state('TEST',{
                 url:'/test',
                 template:'<div ui-view></div>'
             })
-            .state('test.test1',{
+            .state('TEST.test1',{
                 url:'/test1',
-                templateUrl:'app/templates/test/test1.html',
+                templateUrl:'app/templates/Test/test1.html',
                 controller:'test1Ctrl'
             })
-            .state('test.test2',{
-                url:'/test2',
-                templateUrl:'app/templates/test/test2.html',
-                controller:'test2Ctrl'
-            })
             .state('PMS',{
-                url:'/PMS',
+                url:'/pms',
                 template:'<div ui-view></div>'
             })
             .state('PMS.PMSControll',{
@@ -30,8 +25,8 @@ var iasApp=angular.module('iasApp',['ng','ui.router'])
                 controller:'PMSControllCtrl'
             })
             .state('PMS.PMSSingleLine',{
-                url:'/PMSSingleLine',
-                templateUrl:'app/templates/PMS/PMSSingleLine',
+                url:'/PMSSingleline',
+                templateUrl:'app/templates/PMS/PMSSingleLine.html',
                 controller:'PMSSingleLineCtrl'
             })
             .state('Cargo',{
@@ -80,36 +75,36 @@ var iasApp=angular.module('iasApp',['ng','ui.router'])
             })
             .state('Engine',{
                 url:'/Engine',
-                template:'<div ui-view=""></div>'
+                template:'<div ui-view></div>'
             })
             .state('Engine.ME1',{
                 url:'/ME1',
-                templateUrl:'app/templates/Engine/ME1.html',
+                templateUrl:'app/templates/Engines/ME1.html',
                 controller:'ME1Ctrl'
             })
             .state('Engine.ME2',{
                 url:'/ME2',
-                templateUrl:'app/templates/Engine/ME2.html',
+                templateUrl:'app/templates/Engines/ME2.html',
                 controller:'ME2Ctrl'
             })
             .state('Engine.ME3',{
                 url:'/ME3',
-                templateUrl:'app/templates/Engine/ME3.html',
+                templateUrl:'app/templates/Engines/ME3.html',
                 controller:'ME3Ctrl'
             })
             .state('Engine.ME4',{
                 url:'/ME4',
-                templateUrl:'app/templates/Engine/ME4.html',
+                templateUrl:'app/templates/Engines/ME4.html',
                 controller:'ME4Ctrl'
             })
             .state('Engine.LO',{
                 url:'/LO',
-                templateUrl:'app/templates/Engine/LO.html',
+                templateUrl:'app/templates/Engines/LO.html',
                 controller:'LOCtrl'
             })
             .state('Engine.FO',{
                 url:'/FO',
-                templateUrl:'app/templates/Engine/FO.html',
+                templateUrl:'app/templates/Engines/FO.html',
                 controller:'FOCtrl'
             })
             .state('Propulsions',{
@@ -211,7 +206,7 @@ var iasApp=angular.module('iasApp',['ng','ui.router'])
             })
             .state('Misc.WasteSludge',{
                 url:'/WasteSludge',
-                templateUrl:'app/templates/Misc/WasteSludge',
+                templateUrl:'app/templates/Misc/WasteSludge.html',
                 controller:'WasteSludgeCtrl'
             })
             .state('Misc.Hydrophore',{
