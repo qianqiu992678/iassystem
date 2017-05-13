@@ -1,6 +1,14 @@
 'use strict';
 
 /**
+ * Created by Administrator on 2017/5/13.
+ */
+iasApp.controller('BallastDrillWCtrl', ['$scope', function ($scope) {
+  console.log('BallastDrillWCtrl');
+}]);
+'use strict';
+
+/**
  * Created by Administrator on 2017/5/12.
  */
 iasApp.controller('iasCtrl', ['$scope', '$interval', function ($scope, $interval) {
