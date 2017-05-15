@@ -1,4 +1,5 @@
-.babelrc.bak
-/.idea
-/.git
-.gitignore.bak
+*.bak
+.idea
+.git
+.project
+node_modules
