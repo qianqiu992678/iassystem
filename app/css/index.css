@@ -18,6 +18,48 @@ ol {
 .rt {
   float: right;
 }
+.title-tag {
+  width: 260px;
+  background-color: #00275D;
+  height: 40px;
+  border: 1px solid #aaa;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+  color: #c0c0c0;
+  font-size: 16px;
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+.is-command {
+  float: right;
+  margin-right: 8px;
+  margin-top: 8px;
+}
+.is-command .border {
+  border: 2px solid #606060;
+}
+.is-command .command-status {
+  border: 2px solid #606060;
+  line-height: 15px;
+  float: left;
+}
+.is-command .command-status i {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #0f0;
+}
+.is-command .back-ahead .back {
+  border: 2px solid #606060;
+}
+.is-command .back-ahead .ahead {
+  border: 2px solid #606060;
+}
 .ias {
   width: 1600px;
   height: 1200px;

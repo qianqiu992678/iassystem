@@ -14,9 +14,7 @@ iasApp.controller('BallastDrillWCtrl', ['$scope', function ($scope) {
 iasApp.controller('iasCtrl', ['$scope', '$interval', function ($scope, $interval) {
     console.log('iasCtrl');
     $('.body').on('click', function (e) {
-        console.log($(e.target).hasClass('system-item-name'));
         if (!$(e.target).hasClass('category-item-name')) {
-            console.log('body on clicked');
             $('.system-items.active').removeClass('active');
         };
         if (!$(e.target).hasClass('alarm-select-head')) {

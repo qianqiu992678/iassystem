@@ -4,9 +4,7 @@
 iasApp.controller('iasCtrl',['$scope','$interval',function ($scope,$interval) {
     console.log('iasCtrl');
     $('.body').on('click', function (e) {
-        console.log($(e.target).hasClass('system-item-name'))
         if(!$(e.target).hasClass('category-item-name')){
-            console.log('body on clicked')
             $('.system-items.active').removeClass('active')
         };
         if(!$(e.target).hasClass('alarm-select-head')){
@@ -29,6 +27,7 @@ iasApp.controller('iasCtrl',['$scope','$interval',function ($scope,$interval) {
         $(e.target).next().toggleClass('active');
         console.log(e.target,123)
     });
+    //系统时间设定
     $interval(function () {
         $scope.systemTime=new Date();
     },1000)
