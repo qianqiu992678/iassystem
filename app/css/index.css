@@ -34,31 +34,89 @@ ol {
   top: 3px;
   left: 3px;
 }
-.is-command {
+.back-ahead {
   float: right;
-  margin-right: 8px;
-  margin-top: 8px;
+  margin-right: 15px;
+  margin-top: 15px;
 }
-.is-command .border {
+.back-ahead .border {
   border: 2px solid #606060;
+  padding: 5px;
 }
-.is-command .command-status {
+.back-ahead .border:hover {
+  background-color: #aaa;
+}
+.back-ahead .border:active {
+  background-color: #00275D;
+}
+.back-ahead .back {
   border: 2px solid #606060;
-  line-height: 15px;
-  float: left;
+  padding: 5px;
+  padding-right: 10px;
 }
-.is-command .command-status i {
+.back-ahead .back:hover {
+  background-color: #aaa;
+}
+.back-ahead .back:active {
+  background-color: #00275D;
+}
+.back-ahead .ahead {
+  border: 2px solid #606060;
+  padding: 5px;
+  padding-left: 10px;
+}
+.back-ahead .ahead:hover {
+  background-color: #aaa;
+}
+.back-ahead .ahead:active {
+  background-color: #00275D;
+}
+.tank {
+  display: inline-block;
+  padding: 3px;
+  width: 115px;
+  height: 115px;
+  border: 2px solid #000;
+  background-color: #A0A0A0;
+}
+.tank .tank-number {
+  padding: 2px;
+  border-bottom: 1px solid #000;
+  background-color: #606060;
+}
+.tank .xx {
+  padding: 2px;
+  border-bottom: 1px solid #000;
+  background-color: #606060;
+}
+.tank .capacity-detail .capacity-item {
+  margin: 3px 0;
+}
+.tank .capacity-detail .capacity-item span {
+  display: inline-block;
+  width: 80%;
+  background-color: #000;
+  text-align: right;
+  padding-right: 5px;
+  color: #00C000;
+}
+.tank .capacity-detail .capacity-item .height-level,
+.tank .capacity-detail .capacity-item .low-level,
+.tank .capacity-detail .capacity-item .is-alarm {
   display: inline-block;
   width: 15px;
   height: 15px;
+  border: 1px solid #fff;
   border-radius: 50%;
-  background-color: #0f0;
+  background-color: transparent;
 }
-.is-command .back-ahead .back {
-  border: 2px solid #606060;
+.tank .capacity-detail .capacity-item .is-alarm {
+  border-radius: 0;
 }
-.is-command .back-ahead .ahead {
-  border: 2px solid #606060;
+.tank .capacity-detail .capacity-item .height-level.active,
+.tank .capacity-detail .capacity-item .low-level.active,
+.tank .capacity-detail .capacity-item .is-alarm.active {
+  background-color: #f00;
 }
 .ias {
   width: 1600px;

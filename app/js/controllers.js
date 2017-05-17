@@ -3,15 +3,24 @@
 /**
  * Created by Administrator on 2017/5/13.
  */
-iasApp.controller('BallastDrillWCtrl', ['$scope', function ($scope) {
+iasApp.controller('BallastDrillWCtrl', ['$scope', '$rootScope', function ($scope, $rootScope) {
   console.log('BallastDrillWCtrl');
+  console.log('在压载单页打印所有舱室信息：', $scope.tankMessage);
+}]);
+'use strict';
+
+/**
+ * Created by Administrator on 2017/5/17.
+ */
+iasApp.controller('FOCargoCtrl', ['$scope', function ($scope) {
+  console.log('FOCargoCtrl');
 }]);
 'use strict';
 
 /**
  * Created by Administrator on 2017/5/12.
  */
-iasApp.controller('iasCtrl', ['$scope', '$interval', function ($scope, $interval) {
+iasApp.controller('iasCtrl', ['$scope', '$rootScope', '$interval', function ($scope, $rootScope, $interval) {
     console.log('iasCtrl');
     $('.body').on('click', function (e) {
         if (!$(e.target).hasClass('category-item-name')) {
@@ -37,9 +46,21 @@ iasApp.controller('iasCtrl', ['$scope', '$interval', function ($scope, $interval
         $(e.target).next().toggleClass('active');
         console.log(e.target, 123);
     });
+    //系统时间设定
     $interval(function () {
         $scope.systemTime = new Date();
     }, 1000);
+    //获取所有舱室信息
+    $.ajax({
+        url: 'app/data/getTankMessage.php',
+        success: function success(data) {
+            $rootScope.tankMessage = [];
+            $(data).each(function (index, value) {
+                $rootScope.tankMessage[value.tankName] = value;
+            });
+            console.log('接收的数据为：', $rootScope.tankMessage);
+        }
+    });
 }]);
 'use strict';
 
@@ -63,8 +84,20 @@ iasApp.controller('PMSSingleLineCtrl', ['$scope', function ($scope) {
  * Created by Administrator on 2017/5/10.
  */
 iasApp.controller('test1Ctrl', ['$scope', function ($scope) {
-  console.log('test1Ctrl');
-}]);
+    console.log('test1Ctrl');
+}]).directive('myDirective', function ($rootScope) {
+    return {
+        priority: 1000,
+        restrict: 'A',
+        replace: true,
+        scope: {
+            myDirective: '='
+        },
+        template: '<p>from myDirective:{{myDirective}}</p>'
+    };
+}).controller('myController', function ($scope) {
+    $scope.content = 'from controller';
+});
 'use strict';
 
 /**
