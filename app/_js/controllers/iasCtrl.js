@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2017/5/12.
  */
-iasApp.controller('iasCtrl',['$scope','$rootScope','$interval',function ($scope,$rootScope,$interval) {
+iasApp.controller('iasCtrl',['$scope','$interval',function ($scope,$interval) {
     console.log('iasCtrl');
     $('.body').on('click', function (e) {
         if(!$(e.target).hasClass('category-item-name')){
@@ -30,16 +30,5 @@ iasApp.controller('iasCtrl',['$scope','$rootScope','$interval',function ($scope,
     //系统时间设定
     $interval(function () {
         $scope.systemTime=new Date();
-    },1000);
-    //获取所有舱室信息
-    $.ajax({
-        url:'app/data/getTankMessage.php',
-        success: function (data) {
-            $rootScope.tankMessage=[];
-            $(data).each(function (index,value) {
-                $rootScope.tankMessage[value.tankName]=value;
-            });
-            console.log('接收的数据为：',$rootScope.tankMessage);
-        }
-    })
+    },1000)
 }]);

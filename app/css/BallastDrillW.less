@@ -1,0 +1,44 @@
+.title-tag{
+  width: 260px;
+  background-color: @theme-color;
+  height:40px;
+  border: 1px solid #aaa;
+  border-bottom-right-radius: 8px;
+  border-top-left-radius: 8px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+  color:#c0c0c0;
+  font-size: 16px;
+  position:relative;
+  top:3px;
+  left:3px;
+}
+.is-command{
+  .border{
+    border:2px solid #606060;
+  }
+  float: right;
+  margin-right:8px;
+  margin-top:8px;
+  .command-status{
+    .border;
+    line-height: 15px;
+    float: left;
+    i{
+      display: inline-block;
+      width:15px;
+      height:15px;
+      border-radius: 50%;
+      background-color: @on-controll-collor;
+    };
+  }
+  .back-ahead{
+    .back{
+      .border;
+    };
+    .ahead{
+      .border;
+    }
+  }
+}
