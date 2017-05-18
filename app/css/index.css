@@ -135,57 +135,44 @@ output {
 .tank .capacity-detail .capacity-item .is-alarm.active {
   background-color: #f00;
 }
-.pump-component {
-  position: absolute;
-  top: 300px;
-  left: 40px;
-}
-.pump-component .pressure-display {
-  position: absolute;
-  top: -16px;
-  left: 0px;
-  width: 150%;
-}
-.pump-component .pump-controll-pannel {
+.pump-control-pannel {
   position: absolute;
   width: 250px;
   height: 100px;
   border: 1px solid #aaa;
   display: none;
 }
-.pump-component .pump-controll-pannel .drag-bar {
+.pump-control-pannel .drag-bar {
   height: 20px;
   width: 100%;
   padding: 2px;
   border-bottom: 1px solid #606060;
   background-color: #224;
 }
-.pump-component .pump-controll-pannel .speed-set-tool {
+.pump-control-pannel .speed-set-tool {
   margin: 5px;
 }
-.pump-component .pump-controll-pannel .speed-confirm-btn {
-  width: 20px;
-  height: 20px;
-  border: 1px solid #000;
-  border-radius: 50%;
-  background-color: #0086B3;
-}
-.pump-component .pump-controll-pannel .current-speed {
+.pump-control-pannel .current-speed {
   background-color: #000;
   display: inline-block;
   padding: 3px;
   width: 70px;
   height: 22px;
 }
-.pump-component .pump-controll-pannel .pump-start-btn,
-.pump-component .pump-controll-pannel .pump-stop-btn {
+.pump-control-pannel .pump-start-btn,
+.pump-control-pannel .pump-stop-btn {
   background-color: #0086B3;
   width: 40%;
   margin-left: 5%;
   margin-top: 8px;
 }
-.pump-component .pump-controll-pannel.active {
+.pump-control-pannel.active {
   display: block;
+}
+.pump-component {
+  position: absolute;
+  top: 500px;
+  left: 50px;
 }
 .ias {
   width: 1600px;

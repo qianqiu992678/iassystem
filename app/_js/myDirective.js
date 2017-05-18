@@ -38,8 +38,42 @@ iasApp.directive('iasColorBlock', function () {
         templateUrl:'app/templates/directiveTpl/colorBlock.html',
         replace:true
     }
-})
-
+});
+//泵浦指令
+iasApp.directive('iasPumpBody', function () {
+    return{
+        restrict:'EAC',
+        scope:{
+            size:'@',
+            localRemote:'@',
+            isRunning:'@'
+        },
+        templateUrl:'app/templates/directiveTpl/pumpBody.html',
+        replace:true,
+        controller: 'pumpControlCtrl'
+    }
+});
+//泵浦弹出控制窗口
+iasApp.directive('iasPumpControlPannel', function () {
+    return{
+        restrict:'EAC',
+        scope:{
+            speed:'@'
+        },
+        templateUrl:'app/templates/directiveTpl/pumpControlPannel.html',
+        replace:true,
+        controller:'pumpControlPannelCtrl'
+    }
+});
+//完整泵浦
+iasApp.directive('iasPumpComponent', function () {
+    return{
+        restrict:'EAC',
+        scope:{},
+        templateUrl:'app/templates/directiveTpl/iasPumpComponent.html',
+        replace:true
+    }
+});
 
 
 

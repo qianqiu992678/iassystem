@@ -10,6 +10,18 @@ iasApp.controller('BallastDrillWCtrl', ['$scope', '$rootScope', function ($scope
 'use strict';
 
 /**
+ * Created by Administrator on 2017/5/18.
+ */
+iasApp.controller('pumpControlPannelCtrl', ['$scope', function ($scope) {
+    console.log('pumpControlPannelCtrl');
+    $('.close').click(function (e) {
+        console.log($(e.target).parents('.pump-control-pannel'));
+        $(e.target).parents('.pump-control-pannel').removeClass('active');
+    });
+}]);
+'use strict';
+
+/**
  * Created by Administrator on 2017/5/17.
  */
 iasApp.controller('FOCargoCtrl', ['$scope', function ($scope) {
@@ -77,6 +89,17 @@ iasApp.controller('PMSControllCtrl', ['$scope', function ($scope) {
  */
 iasApp.controller('PMSSingleLineCtrl', ['$scope', function ($scope) {
   console.log('PMSSingleLineCtrl');
+}]);
+'use strict';
+
+/**
+ * Created by Administrator on 2017/5/18.
+ */
+iasApp.controller('pumpControlCtrl', ['$scope', function ($scope) {
+    console.log('pumpControlCtrl');
+    $('.pump-body').click(function (e) {
+        $(e.target).parents('.pump-component').children('.pump-control-pannel').addClass('active');
+    });
 }]);
 'use strict';
 

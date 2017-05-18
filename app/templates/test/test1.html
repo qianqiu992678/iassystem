@@ -20,36 +20,21 @@
 <ias-color-block wi="50" he="4" color="#000"></ias-color-block>
 <ias-color-block wi="30" he="10" color="red"></ias-color-block>
 
-<!--//泵组件指令-->
-<div class="pump-component">
-    <svg width="100px" height="30px">
-        <line x1="0" y1="15" x2="100" y2="15" stroke="#A0A0A0" stroke-width="4" />
-        <line x1="15" y1="0" x2="15" y2="13" stroke="#fff" stroke-width="2" />
-        <line x1="85" y1="0" x2="85" y2="13" stroke="#fff" stroke-width="2" />
-        <circle class="pump" cx="50" cy="15" r="15"
-                stroke="black" stroke-width="1" fill="#0000FF" />
-        <polygon class="pump-body" points="42,3 65,15 42,27" fill="#fff"/>
-    </svg>
-    <div class="pressure-display">
-        <output class="suction-pressure">-0.09MPa</output>
-        <output class="discharge-pressure">0.35MPa</output>
-    </div>
-    <div class="pump-controll-pannel">
-        <div class="drag-bar">
-            <a href class="close">X</a>
-        </div>
-        <div class="controll-items">
-            <ul>
-                <li>
-                    <input class="speed-set-tool" type="range">
-                    <button class="speed-confirm-btn">go</button>
-                    <output class="current-speed">1500rpm</output>
-                </li>
-                <li>
-                    <button class="pump-start-btn">启动</button>
-                    <button class="pump-stop-btn">停止</button>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+<h2>泵指令测试</h2>
+<ias-pump-body size="50" local-remote="#00f" is-running="green"></ias-pump-body>
+<ias-pump-body size="100" local-remote="#fff" is-running="#fff"></ias-pump-body>
+
+<h2>泵控制板指令测试</h2>
+<ias-pump-control-pannel speed="1200"></ias-pump-control-pannel>
+<h2>完整泵指令测试</h2>
+<ias-pump-component></ias-pump-component>
+
+
+
+<!--&lt;!&ndash;//泵组件指令&ndash;&gt;-->
+<!--<div class="pump-component">-->
+    <!--<div class="pressure-display">-->
+        <!--<output class="suction-pressure">-0.09MPa</output>-->
+        <!--<output class="discharge-pressure">0.35MPa</output>-->
+    <!--</div>-->
+<!--</div>-->
