@@ -85,6 +85,20 @@ iasApp.controller('PMSSingleLineCtrl', ['$scope', function ($scope) {
  */
 iasApp.controller('test1Ctrl', ['$scope', function ($scope) {
     console.log('test1Ctrl');
+    $('.pump-start-btn').click(function (e) {
+        $(e.target).parents('.pump-controll-pannel').prev().children('.pump-body').attr('fill', 'green');
+    });
+    $('.pump-stop-btn').click(function (e) {
+        $(e.target).parents('.pump-controll-pannel').prev().children('.pump-body').attr('fill', 'white');
+    });
+    $('.pump').click(function (e) {
+        $(e.target).parent().next().addClass('active');
+    });
+    $('.close').click(function (e) {
+        console.log('close');
+        console.log($(e.target).parents('.pump-controll-pannel'));
+        $(e.target).parents('.pump-controll-pannel').removeClass('active');
+    });
 }]).directive('myDirective', function ($rootScope) {
     return {
         priority: 1000,
@@ -106,3 +120,7 @@ iasApp.controller('test1Ctrl', ['$scope', function ($scope) {
 iasApp.controller('test2Ctrl', ['$scope', function ($scope) {
   console.log('test2Ctrl');
 }]);
+/**
+ * Created by Administrator on 2017/5/15.
+ */
+"use strict";

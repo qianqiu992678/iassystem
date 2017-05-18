@@ -13,3 +13,43 @@
     <input type="text" ng-model="content">
     <div my-directive="content"></div>{{content}}
 </p>
+<ias-tpl sys-name="Ballast&Drillw"></ias-tpl>
+<ias-tank-message class="TK61-PS" tank-name="{{tankMessage['TK61(PS)'].tankName}}" persent="0%" volume="{{tankMessage['TK61(PS)'].currentVolumn}}" quality="0">
+</ias-tank-message>
+<h2>色块指令测试：</h2>
+<ias-color-block wi="50" he="4" color="#000"></ias-color-block>
+<ias-color-block wi="30" he="10" color="red"></ias-color-block>
+
+<!--//泵组件指令-->
+<div class="pump-component">
+    <svg width="100px" height="30px">
+        <line x1="0" y1="15" x2="100" y2="15" stroke="#A0A0A0" stroke-width="4" />
+        <line x1="15" y1="0" x2="15" y2="13" stroke="#fff" stroke-width="2" />
+        <line x1="85" y1="0" x2="85" y2="13" stroke="#fff" stroke-width="2" />
+        <circle class="pump" cx="50" cy="15" r="15"
+                stroke="black" stroke-width="1" fill="#0000FF" />
+        <polygon class="pump-body" points="42,3 65,15 42,27" fill="#fff"/>
+    </svg>
+    <div class="pressure-display">
+        <output class="suction-pressure">-0.09MPa</output>
+        <output class="discharge-pressure">0.35MPa</output>
+    </div>
+    <div class="pump-controll-pannel">
+        <div class="drag-bar">
+            <a href class="close">X</a>
+        </div>
+        <div class="controll-items">
+            <ul>
+                <li>
+                    <input class="speed-set-tool" type="range">
+                    <button class="speed-confirm-btn">go</button>
+                    <output class="current-speed">1500rpm</output>
+                </li>
+                <li>
+                    <button class="pump-start-btn">启动</button>
+                    <button class="pump-stop-btn">停止</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

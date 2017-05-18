@@ -28,3 +28,16 @@ iasApp.directive('iasTankMessage', function () {
         replace: true
     };
 });
+//色块指令
+iasApp.directive('iasColorBlock', function () {
+    return {
+        restrict: 'EAC',
+        scope: {
+            wi: '@',
+            he: '@',
+            color: '@'
+        },
+        templateUrl: 'app/templates/directiveTpl/colorBlock.html',
+        replace: true
+    };
+});

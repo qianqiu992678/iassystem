@@ -18,6 +18,22 @@ ol {
 .rt {
   float: right;
 }
+.close {
+  float: right;
+  border-radius: 50%;
+  padding: 0 4px;
+}
+.close:active {
+  background-color: #0000FF;
+}
+output {
+  background-color: #000;
+  display: inline-block;
+}
+.TK61-PS {
+  top: 300px;
+  left: 300px;
+}
 .title-tag {
   width: 260px;
   background-color: #00275D;
@@ -78,6 +94,7 @@ ol {
   height: 115px;
   border: 2px solid #000;
   background-color: #A0A0A0;
+  position: absolute;
 }
 .tank .tank-number {
   padding: 2px;
@@ -117,6 +134,58 @@ ol {
 .tank .capacity-detail .capacity-item .low-level.active,
 .tank .capacity-detail .capacity-item .is-alarm.active {
   background-color: #f00;
+}
+.pump-component {
+  position: absolute;
+  top: 300px;
+  left: 40px;
+}
+.pump-component .pressure-display {
+  position: absolute;
+  top: -16px;
+  left: 0px;
+  width: 150%;
+}
+.pump-component .pump-controll-pannel {
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  border: 1px solid #aaa;
+  display: none;
+}
+.pump-component .pump-controll-pannel .drag-bar {
+  height: 20px;
+  width: 100%;
+  padding: 2px;
+  border-bottom: 1px solid #606060;
+  background-color: #224;
+}
+.pump-component .pump-controll-pannel .speed-set-tool {
+  margin: 5px;
+}
+.pump-component .pump-controll-pannel .speed-confirm-btn {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #0086B3;
+}
+.pump-component .pump-controll-pannel .current-speed {
+  background-color: #000;
+  display: inline-block;
+  padding: 3px;
+  width: 70px;
+  height: 22px;
+}
+.pump-component .pump-controll-pannel .pump-start-btn,
+.pump-component .pump-controll-pannel .pump-stop-btn {
+  background-color: #0086B3;
+  width: 40%;
+  margin-left: 5%;
+  margin-top: 8px;
+}
+.pump-component .pump-controll-pannel.active {
+  display: block;
 }
 .ias {
   width: 1600px;
@@ -163,6 +232,7 @@ ol {
 .ias .head .displaybar-menu .category-item .category-item-name {
   display: block;
   width: 100%;
+  line-height: 21px;
 }
 .ias .head .displaybar-menu .category-item .system-items {
   width: 190px;
@@ -170,6 +240,7 @@ ol {
   top: 110%;
   left: 0;
   background-color: #00275D;
+  z-index: 1000;
 }
 .ias .head .displaybar-menu .category-item .system-item {
   border: 2px solid transparent;
