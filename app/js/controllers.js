@@ -12,11 +12,37 @@ iasApp.controller('BallastDrillWCtrl', ['$scope', '$rootScope', function ($scope
 /**
  * Created by Administrator on 2017/5/18.
  */
-iasApp.controller('pumpControlPannelCtrl', ['$scope', function ($scope) {
+iasApp.controller('pumpBodyCtrl', ['$scope', function ($scope) {
+    console.log('pumpBodyCtrl');
+    $('.pump-body').click(function (e) {
+        $(e.target).parents('.pump-component').children('.pump-control-pannel').addClass('active');
+    });
+}]);
+'use strict';
+
+/**
+ * Created by Administrator on 2017/5/19.
+ */
+iasApp.controller('pumpComponentCtrl', ['$scope', function ($scope) {
+  console.log('pumpComponentCtrl');
+}]);
+'use strict';
+
+/**
+ * Created by Administrator on 2017/5/18.
+ */
+iasApp.controller('pumpControlPannelCtrl', ['$scope', '$rootScope', function ($scope, $rootScope) {
     console.log('pumpControlPannelCtrl');
     $('.close').click(function (e) {
-        console.log($(e.target).parents('.pump-control-pannel'));
         $(e.target).parents('.pump-control-pannel').removeClass('active');
+    });
+    $('.pump-start-btn').click(function (e) {
+        console.log('start pump');
+        $rootScope.pumpIsRunningControl(e, 1);
+    });
+    $('.pump-stop-btn').click(function (e) {
+        console.log('stop pump');
+        $rootScope.pumpIsRunningControl(e, false);
     });
 }]);
 'use strict';
@@ -63,16 +89,58 @@ iasApp.controller('iasCtrl', ['$scope', '$rootScope', '$interval', function ($sc
         $scope.systemTime = new Date();
     }, 1000);
     //获取所有舱室信息
-    $.ajax({
-        url: 'app/data/getTankMessage.php',
-        success: function success(data) {
-            $rootScope.tankMessage = [];
-            $(data).each(function (index, value) {
-                $rootScope.tankMessage[value.tankName] = value;
-            });
-            console.log('接收的数据为：', $rootScope.tankMessage);
-        }
-    });
+    $rootScope.getTankMessage = function () {
+        $.ajax({
+            url: 'app/data/getTankMessage.php',
+            success: function success(data) {
+                $rootScope.tankMessage = [];
+                $(data).each(function (index, value) {
+                    $rootScope.tankMessage[value.tankName] = value;
+                });
+                console.log('处理后的舱室信息数据为：', $rootScope.tankMessage);
+            }
+        });
+    };
+    //获取所有泵浦信息方法
+    $rootScope.getPumpMessage = function () {
+        $.ajax({
+            url: 'app/data/getPumpMessage.php',
+            success: function success(data) {
+                console.log('接收的泵浦信息数据为33：', data);
+                $rootScope.pumpMessage = [];
+                $(data).each(function (index, value) {
+                    value.isRunning = value.isRunning == 1 ? '#0f0' : '#fff';
+                    value.isRemote = value.isRemote == 1 ? '#fff' : '#00f';
+                    $rootScope.pumpMessage[value.pumpName] = value;
+                });
+                console.log('处理后的泵浦信息数据为：', $rootScope.pumpMessage);
+            },
+            error: function error(data) {
+                console.log(data, '接收泵浦信息失败');
+            }
+        });
+    };
+
+    //定义泵启停方法
+    $rootScope.pumpIsRunningControl = function (e, isRunning) {
+
+        console.log('接收的参数为：', e.target, isRunning);
+        var pumpName = $(e.target).parent().attr('pump-name');
+        console.log('发送的参数为：', pumpName, isRunning);
+        $.ajax({
+            url: 'app/data/pumpIsRunningControl.php?pumpName=' + pumpName + '&isRunning=' + isRunning,
+            success: function success(data) {
+                console.log(data, 1234);
+                $rootScope.getPumpMessage();
+            },
+            error: function error(data) {
+                console.log('泵启停失败：', data);
+            }
+        });
+    };
+    //定义调速停方法
+    $rootScope.getPumpMessage();
+    $rootScope.getTankMessage();
 }]);
 'use strict';
 
@@ -95,6 +163,25 @@ iasApp.controller('PMSSingleLineCtrl', ['$scope', function ($scope) {
 /**
  * Created by Administrator on 2017/5/18.
  */
+iasApp.controller('pumpBodyCtrl', ['$scope', function ($scope) {
+    console.log('pumpBodyCtrl');
+    $('.pump-body').click(function (e) {
+        $(e.target).parents('.pump-component').children('.pump-control-pannel').addClass('active');
+    });
+}]);
+'use strict';
+
+/**
+ * Created by Administrator on 2017/5/19.
+ */
+iasApp.controller('pumpComponentCtrl', ['$scope', function ($scope) {
+  console.log('pumpComponentCtrl');
+}]);
+'use strict';
+
+/**
+ * Created by Administrator on 2017/5/18.
+ */
 iasApp.controller('pumpControlCtrl', ['$scope', function ($scope) {
     console.log('pumpControlCtrl');
     $('.pump-body').click(function (e) {
@@ -106,22 +193,11 @@ iasApp.controller('pumpControlCtrl', ['$scope', function ($scope) {
 /**
  * Created by Administrator on 2017/5/10.
  */
-iasApp.controller('test1Ctrl', ['$scope', function ($scope) {
+iasApp.controller('test1Ctrl', ['$scope', '$rootScope', function ($scope, $rootScope) {
     console.log('test1Ctrl');
-    $('.pump-start-btn').click(function (e) {
-        $(e.target).parents('.pump-controll-pannel').prev().children('.pump-body').attr('fill', 'green');
-    });
-    $('.pump-stop-btn').click(function (e) {
-        $(e.target).parents('.pump-controll-pannel').prev().children('.pump-body').attr('fill', 'white');
-    });
-    $('.pump').click(function (e) {
-        $(e.target).parent().next().addClass('active');
-    });
-    $('.close').click(function (e) {
-        console.log('close');
-        console.log($(e.target).parents('.pump-controll-pannel'));
-        $(e.target).parents('.pump-controll-pannel').removeClass('active');
-    });
+    console.log($rootScope.pumpMessage);
+    //console.log('有引号的：',$rootScope.pumpMessage['ballast/drillPum'])
+    console.log('有引号的：', $rootScope.pumpMessage['ballastdrillPump'].ratedPower);
 }]).directive('myDirective', function ($rootScope) {
     return {
         priority: 1000,

@@ -50,7 +50,7 @@ iasApp.directive('iasPumpBody', function () {
         },
         templateUrl:'app/templates/directiveTpl/pumpBody.html',
         replace:true,
-        controller: 'pumpControlCtrl'
+        controller: 'pumpBodyCtrl'
     }
 });
 //泵浦弹出控制窗口
@@ -58,7 +58,8 @@ iasApp.directive('iasPumpControlPannel', function () {
     return{
         restrict:'EAC',
         scope:{
-            speed:'@'
+            speed:'@',
+            pumpName:'@'
         },
         templateUrl:'app/templates/directiveTpl/pumpControlPannel.html',
         replace:true,
@@ -69,9 +70,16 @@ iasApp.directive('iasPumpControlPannel', function () {
 iasApp.directive('iasPumpComponent', function () {
     return{
         restrict:'EAC',
-        scope:{},
+        scope:{
+            si:'@',
+            lR:'@',
+            isR:'@',
+            sp:'@',
+            pumpName:'@'
+        },
         templateUrl:'app/templates/directiveTpl/iasPumpComponent.html',
-        replace:true
+        replace:true,
+        controller:'pumpComponentCtrl'
     }
 });
 

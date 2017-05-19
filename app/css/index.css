@@ -171,8 +171,6 @@ output {
 }
 .pump-component {
   position: absolute;
-  top: 500px;
-  left: 50px;
 }
 .ias {
   width: 1600px;

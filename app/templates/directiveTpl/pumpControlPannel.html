@@ -8,9 +8,9 @@
                 <input class="speed-set-tool" type="range">
                 <output class="current-speed">{{speed}}rpm</output>
             </li>
-            <li>
-                <button class="pump-start-btn">启动</button>
-                <button class="pump-stop-btn">停止</button>
+            <li pump-name="{{pumpName}}">
+                <button type="button" class="pump-start-btn">启动</button>
+                <button type="button" class="pump-stop-btn">停止</button>
             </li>
         </ul>
     </div>

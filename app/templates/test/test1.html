@@ -26,8 +26,17 @@
 
 <h2>泵控制板指令测试</h2>
 <ias-pump-control-pannel speed="1200"></ias-pump-control-pannel>
-<h2>完整泵指令测试</h2>
-<ias-pump-component></ias-pump-component>
+<h2>完整泵指令测试{{pumpMessage['ballastdrillPump'].isRemote}}{{pumpMessage['ballastdrillPump'].currentSpeed}}</h2>
+<ias-pump-component si="40" l-r="{{pumpMessage['ballastdrillPump'].isRemote}}"
+                    is-r="{{pumpMessage['ballastdrillPump'].isRunning}}" sp="{{pumpMessage['ballastdrillPump'].currentSpeed}}"
+                    pump-name="{{pumpMessage['ballastdrillPump'].pumpName}}">
+</ias-pump-component>
+<br>
+
+<ias-pump-component si="80" l-r="{{pumpMessage['freshwaterPump'].isRemote}}"
+                    is-r="{{pumpMessage['freshwaterPump'].isRunning}}" sp="{{pumpMessage['ballastdrillPump'].currentSpeed}}"
+                    pump-name="{{pumpMessage['freshwaterPump'].pumpName}}">
+</ias-pump-component>
 
 
 
