@@ -1,3 +1,4 @@
+//单页通用模板
 .title-tag{
   width: 260px;
   background-color: @theme-color;
@@ -45,6 +46,7 @@
   height:115px;
   border:2px solid #000;
   background-color:#A0A0A0;
+  position:absolute;
   .tank-number{
     padding:2px;
     border-bottom:1px solid #000;
@@ -54,7 +56,6 @@
     .tank-number;
   }
   .capacity-detail{
-
     .capacity-item{
       margin:3px 0;
       span{
@@ -82,3 +83,63 @@
     }
   }
 }
+//泵浦弹出控制窗口
+.pump-control-pannel{
+  position:absolute;
+  width:250px;
+  height:100px;
+  border:1px solid #aaa;
+  display:none;
+  .drag-bar{
+    height:20px;
+    width:100%;
+    padding:2px;
+    border-bottom:1px solid #606060;
+    background-color:#224;
+  }
+  .speed-set-tool{
+    margin:5px;
+  }
+  .current-speed{
+    background-color: #000;
+    display: inline-block;
+    padding:3px;
+    width:70px;
+    height:22px;
+  }
+  .pump-start-btn,.pump-stop-btn{
+    background-color: #0086B3;
+    width:40%;
+    margin-left:5%;
+    margin-top:8px;
+  }
+}
+.pump-control-pannel.active{
+  display:block;
+}
+//完整泵浦
+.pump-component{
+  position: absolute;
+}
+
+
+
+
+
+
+
+////泵组件样式
+//.pump-component{
+//  position: absolute;
+//  //border: 1px solid red;
+//  top:300px;
+//  left:40px;
+//
+//  .pressure-display{
+//    position:absolute;
+//    top:-16px;
+//    left:0px;
+//    width:150%;
+//  }
+//
+//}
