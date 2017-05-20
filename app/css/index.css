@@ -30,10 +30,6 @@ output {
   background-color: #000;
   display: inline-block;
 }
-.TK61-PS {
-  top: 300px;
-  left: 300px;
-}
 .title-tag {
   width: 260px;
   background-color: #00275D;
@@ -171,6 +167,14 @@ output {
 }
 .pump-component {
   position: absolute;
+}
+.pump-component.ballastdrillPump {
+  top: 300px;
+  left: 300px;
+}
+.TK61-PS {
+  top: 300px;
+  left: 500px;
 }
 .ias {
   width: 1600px;
