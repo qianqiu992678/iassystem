@@ -1,8 +1,11 @@
 /**
  * Created by Administrator on 2017/5/10.
  */
-iasApp.controller('test1Ctrl',['$scope', function ($scope) {
-    console.log('test1Ctrl')
+iasApp.controller('test1Ctrl',['$scope','$rootScope', function ($scope,$rootScope) {
+    console.log('test1Ctrl');
+    console.log($rootScope.pumpMessage)
+    //console.log('有引号的：',$rootScope.pumpMessage['ballast/drillPum'])
+    console.log('有引号的：',$rootScope.pumpMessage['ballastdrillPump'].ratedPower)
 }])
     .directive('myDirective', function($rootScope) {
         return {

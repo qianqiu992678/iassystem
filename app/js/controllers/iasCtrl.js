@@ -34,14 +34,56 @@ iasApp.controller('iasCtrl', ['$scope', '$rootScope', '$interval', function ($sc
         $scope.systemTime = new Date();
     }, 1000);
     //获取所有舱室信息
-    $.ajax({
-        url: 'app/data/getTankMessage.php',
-        success: function success(data) {
-            $rootScope.tankMessage = [];
-            $(data).each(function (index, value) {
-                $rootScope.tankMessage[value.tankName] = value;
-            });
-            console.log('接收的数据为：', $rootScope.tankMessage);
-        }
-    });
+    $rootScope.getTankMessage = function () {
+        $.ajax({
+            url: 'app/data/getTankMessage.php',
+            success: function success(data) {
+                $rootScope.tankMessage = [];
+                $(data).each(function (index, value) {
+                    $rootScope.tankMessage[value.tankName] = value;
+                });
+                console.log('处理后的舱室信息数据为：', $rootScope.tankMessage);
+            }
+        });
+    };
+    //获取所有泵浦信息方法
+    $rootScope.getPumpMessage = function () {
+        $.ajax({
+            url: 'app/data/getPumpMessage.php',
+            success: function success(data) {
+                console.log('接收的泵浦信息数据为33：', data);
+                $rootScope.pumpMessage = [];
+                $(data).each(function (index, value) {
+                    value.isRunning = value.isRunning == 1 ? '#0f0' : '#fff';
+                    value.isRemote = value.isRemote == 1 ? '#fff' : '#00f';
+                    $rootScope.pumpMessage[value.pumpName] = value;
+                });
+                console.log('处理后的泵浦信息数据为：', $rootScope.pumpMessage);
+            },
+            error: function error(data) {
+                console.log(data, '接收泵浦信息失败');
+            }
+        });
+    };
+
+    //定义泵启停方法
+    $rootScope.pumpIsRunningControl = function (e, isRunning) {
+
+        console.log('接收的参数为：', e.target, isRunning);
+        var pumpName = $(e.target).parent().attr('pump-name');
+        console.log('发送的参数为：', pumpName, isRunning);
+        $.ajax({
+            url: 'app/data/pumpIsRunningControl.php?pumpName=' + pumpName + '&isRunning=' + isRunning,
+            success: function success(data) {
+                console.log(data, 1234);
+                $rootScope.getPumpMessage();
+            },
+            error: function error(data) {
+                console.log('泵启停失败：', data);
+            }
+        });
+    };
+    //定义调速停方法
+    $rootScope.getPumpMessage();
+    $rootScope.getTankMessage();
 }]);

@@ -1,4 +1,6 @@
+'use strict';
+
 /**
  * Created by Administrator on 2017/5/10.
  */
-"use strict";
+console.log('in index.js');

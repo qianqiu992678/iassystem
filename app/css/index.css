@@ -18,6 +18,18 @@ ol {
 .rt {
   float: right;
 }
+.close {
+  float: right;
+  border-radius: 50%;
+  padding: 0 4px;
+}
+.close:active {
+  background-color: #0000FF;
+}
+output {
+  background-color: #000;
+  display: inline-block;
+}
 .title-tag {
   width: 260px;
   background-color: #00275D;
@@ -78,6 +90,7 @@ ol {
   height: 115px;
   border: 2px solid #000;
   background-color: #A0A0A0;
+  position: absolute;
 }
 .tank .tank-number {
   padding: 2px;
@@ -117,6 +130,51 @@ ol {
 .tank .capacity-detail .capacity-item .low-level.active,
 .tank .capacity-detail .capacity-item .is-alarm.active {
   background-color: #f00;
+}
+.pump-control-pannel {
+  position: absolute;
+  width: 250px;
+  height: 100px;
+  border: 1px solid #aaa;
+  display: none;
+}
+.pump-control-pannel .drag-bar {
+  height: 20px;
+  width: 100%;
+  padding: 2px;
+  border-bottom: 1px solid #606060;
+  background-color: #224;
+}
+.pump-control-pannel .speed-set-tool {
+  margin: 5px;
+}
+.pump-control-pannel .current-speed {
+  background-color: #000;
+  display: inline-block;
+  padding: 3px;
+  width: 70px;
+  height: 22px;
+}
+.pump-control-pannel .pump-start-btn,
+.pump-control-pannel .pump-stop-btn {
+  background-color: #0086B3;
+  width: 40%;
+  margin-left: 5%;
+  margin-top: 8px;
+}
+.pump-control-pannel.active {
+  display: block;
+}
+.pump-component {
+  position: absolute;
+}
+.pump-component.ballastdrillPump {
+  top: 300px;
+  left: 300px;
+}
+.TK61-PS {
+  top: 300px;
+  left: 500px;
 }
 .ias {
   width: 1600px;
@@ -163,6 +221,7 @@ ol {
 .ias .head .displaybar-menu .category-item .category-item-name {
   display: block;
   width: 100%;
+  line-height: 21px;
 }
 .ias .head .displaybar-menu .category-item .system-items {
   width: 190px;
@@ -170,6 +229,7 @@ ol {
   top: 110%;
   left: 0;
   background-color: #00275D;
+  z-index: 1000;
 }
 .ias .head .displaybar-menu .category-item .system-item {
   border: 2px solid transparent;
