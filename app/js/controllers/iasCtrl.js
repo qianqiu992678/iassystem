@@ -65,7 +65,23 @@ iasApp.controller('iasCtrl', ['$scope', '$rootScope', '$interval', function ($sc
             }
         });
     };
-
+    //获取所有报警点信息方法
+    $rootScope.getAlarmMessage = function () {
+        $.ajax({
+            url: 'app/data/getAlarmMessage.php',
+            success: function success(data) {
+                console.log('接收的报警点信息为：', data);
+                $rootScope.alarmMessage = [];
+                $(data).each(function (index, value) {
+                    $rootScope.alarmMessage[value.alarmName] = value;
+                });
+                console.log('处理后的报警点信息为：', $rootScope.alarmMessage);
+            },
+            error: function error(data) {
+                console.log('接收报警点信息失败：', data);
+            }
+        });
+    };
     //定义泵启停方法
     $rootScope.pumpIsRunningControl = function (e, isRunning) {
 
@@ -86,4 +102,5 @@ iasApp.controller('iasCtrl', ['$scope', '$rootScope', '$interval', function ($sc
     //定义调速停方法
     $rootScope.getPumpMessage();
     $rootScope.getTankMessage();
+    $rootScope.getAlarmMessage();
 }]);
