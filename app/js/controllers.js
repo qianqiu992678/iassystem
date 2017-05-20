@@ -7,6 +7,12 @@ iasApp.controller('BallastDrillWCtrl', ['$scope', '$rootScope', function ($scope
   console.log('BallastDrillWCtrl');
   console.log('在压载单页打印所有舱室信息：', $scope.tankMessage);
 }]);
+/**
+ * Created by Administrator on 2017/5/20.
+ */
+iasApp.controller('BilgeCtrl',['$scope', function ($scope) {
+    console.log('BilgeCtrl')
+}])
 'use strict';
 
 /**
@@ -219,6 +225,10 @@ iasApp.controller('test1Ctrl', ['$scope', '$rootScope', function ($scope, $rootS
 iasApp.controller('test2Ctrl', ['$scope', function ($scope) {
   console.log('test2Ctrl');
 }]);
+/**
+ * Created by Administrator on 2017/5/15.
+ */
+"use strict";
 /**
  * Created by Administrator on 2017/5/15.
  */
