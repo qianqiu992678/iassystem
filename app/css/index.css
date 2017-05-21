@@ -61,26 +61,26 @@ output {
 .back-ahead .border:active {
   background-color: #00275D;
 }
-.back-ahead .back {
+.back-ahead .path-back {
   border: 2px solid #606060;
   padding: 5px;
   padding-right: 10px;
 }
-.back-ahead .back:hover {
+.back-ahead .path-back:hover {
   background-color: #aaa;
 }
-.back-ahead .back:active {
+.back-ahead .path-back:active {
   background-color: #00275D;
 }
-.back-ahead .ahead {
+.back-ahead .path-ahead {
   border: 2px solid #606060;
   padding: 5px;
   padding-left: 10px;
 }
-.back-ahead .ahead:hover {
+.back-ahead .path-ahead:hover {
   background-color: #aaa;
 }
-.back-ahead .ahead:active {
+.back-ahead .path-ahead:active {
   background-color: #00275D;
 }
 .tank {
