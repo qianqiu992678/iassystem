@@ -7,6 +7,16 @@ iasApp.controller('BallastDrillWCtrl', ['$scope', '$rootScope', function ($scope
   console.log('BallastDrillWCtrl');
   console.log('在压载单页打印所有舱室信息：', $scope.tankMessage);
 }]);
+/**
+ * Created by Administrator on 2017/5/20.
+ */
+iasApp.controller('BilgeCtrl',['$scope', function ($scope) {
+    console.log('BilgeCtrl')
+}])
+
+
+
+
 'use strict';
 
 /**
@@ -88,6 +98,8 @@ iasApp.controller('iasCtrl', ['$scope', '$rootScope', '$interval', function ($sc
     $interval(function () {
         $scope.systemTime = new Date();
     }, 1000);
+    //定义路径
+    $rootScope.path = [];
     //获取所有舱室信息
     $rootScope.getTankMessage = function () {
         $.ajax({
@@ -155,9 +167,36 @@ iasApp.controller('iasCtrl', ['$scope', '$rootScope', '$interval', function ($sc
         });
     };
     //定义调速停方法
+
+
     $rootScope.getPumpMessage();
     $rootScope.getTankMessage();
     $rootScope.getAlarmMessage();
+}]);
+'use strict';
+
+/**
+ * Created by Administrator on 2017/5/21.
+ */
+iasApp.controller('iasTplCtrl', ['$scope', '$rootScope', function ($scope, $rootScope) {
+    console.log('iasTplCtrl');
+    $rootScope.$on('$stateChangeStart', function () {
+        console.log('state change start', $rootScope.path);
+    });
+    $rootScope.$on('$stateChangeSuccess', function () {
+        console.log(arguments);
+        $rootScope.path.push(0);
+        console.log('state change success', $rootScope.path);
+    });
+    $rootScope.$on('$stateChangeError', function () {
+        console.log('state change error', $rootScope.path);
+    });
+    $('.path-back').click(function () {
+        console.log('path-back', $rootScope.path);
+    });
+    $('.path-ahead').click(function () {
+        console.log('path-ahead', $rootScope.path);
+    });
 }]);
 'use strict';
 
@@ -236,6 +275,10 @@ iasApp.controller('test1Ctrl', ['$scope', '$rootScope', function ($scope, $rootS
 iasApp.controller('test2Ctrl', ['$scope', function ($scope) {
   console.log('test2Ctrl');
 }]);
+/**
+ * Created by Administrator on 2017/5/15.
+ */
+"use strict";
 /**
  * Created by Administrator on 2017/5/15.
  */

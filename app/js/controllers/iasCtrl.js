@@ -33,6 +33,8 @@ iasApp.controller('iasCtrl', ['$scope', '$rootScope', '$interval', function ($sc
     $interval(function () {
         $scope.systemTime = new Date();
     }, 1000);
+    //定义路径
+    $rootScope.path = [];
     //获取所有舱室信息
     $rootScope.getTankMessage = function () {
         $.ajax({
@@ -100,6 +102,8 @@ iasApp.controller('iasCtrl', ['$scope', '$rootScope', '$interval', function ($sc
         });
     };
     //定义调速停方法
+
+
     $rootScope.getPumpMessage();
     $rootScope.getTankMessage();
     $rootScope.getAlarmMessage();

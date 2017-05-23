@@ -31,6 +31,8 @@ iasApp.controller('iasCtrl',['$scope','$rootScope','$interval',function ($scope,
     $interval(function () {
         $scope.systemTime=new Date();
     },1000);
+    //定义路径
+    $rootScope.path=[];
     //获取所有舱室信息
     $rootScope.getTankMessage= function () {
         $.ajax({
@@ -64,6 +66,7 @@ iasApp.controller('iasCtrl',['$scope','$rootScope','$interval',function ($scope,
             }
         });
     };
+
     //获取所有报警点信息方法
     $rootScope.getAlarmMessage= function () {
         $.ajax({
@@ -81,6 +84,7 @@ iasApp.controller('iasCtrl',['$scope','$rootScope','$interval',function ($scope,
             }
         })
     };
+
     //定义泵启停方法
     $rootScope.pumpIsRunningControl= function (e,isRunning) {
 
@@ -97,8 +101,10 @@ iasApp.controller('iasCtrl',['$scope','$rootScope','$interval',function ($scope,
                 console.log('泵启停失败：',data)
             }
         });
-    }
+    };
     //定义调速停方法
+
+
     $rootScope.getPumpMessage();
     $rootScope.getTankMessage();
     $rootScope.getAlarmMessage();
