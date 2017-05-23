@@ -1,3 +1,13 @@
 <ias-tpl sys-name="Ballast&Drillw"></ias-tpl>
 <ias-tank-message class="TK61-PS" tank-name="{{tankMessage['TK61(PS)'].tankName}}" persent="0%" volume="{{tankMessage['TK61(PS)'].currentVolumn}}" quality="0">
 </ias-tank-message>
+
+<ias-pump-component si="50" l-r="{{pumpMessage['freshwaterPump'].isRemote}}"
+                    is-r="{{pumpMessage['freshwaterPump'].isRunning}}" sp="{{pumpMessage['ballastdrillPump'].currentSpeed}}"
+                    pump-name="{{pumpMessage['freshwaterPump'].pumpName}}">
+</ias-pump-component>
+
+<ias-pump-component si="80" l-r="{{pumpMessage['fueloilPump'].isRemote}}"
+                    is-r="{{pumpMessage['fueloilPump'].isRunning}}" sp="{{pumpMessage['ballastdrillPump'].currentSpeed}}"
+                    pump-name="{{pumpMessage['fueloilPump'].pumpName}}">
+</ias-pump-component>

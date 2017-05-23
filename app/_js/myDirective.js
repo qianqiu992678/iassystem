@@ -83,6 +83,18 @@ iasApp.directive('iasPumpComponent', function () {
         controller:'pumpComponentCtrl'
     }
 });
+iasApp.directive('iasLevelAlarm', function () {
+    return{
+        restrict:'EAC',
+        scope:{
+            alarmName:'@',
+            alarmClass:'@'
+        },
+        templateUrl:'app/templates/directiveTpl/levelAlarm.html',
+        replace:true,
+        controller:''
+    }
+});
 
 
 
