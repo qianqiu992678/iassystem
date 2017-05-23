@@ -32,14 +32,16 @@
                     is-r="{{pumpMessage['ballastdrillPump'].isRunning}}" sp="{{pumpMessage['ballastdrillPump'].currentSpeed}}"
                     pump-name="{{pumpMessage['ballastdrillPump'].pumpName}}">
 </ias-pump-component>
-<br>
 
 <ias-pump-component si="80" l-r="{{pumpMessage['freshwaterPump'].isRemote}}"
                     is-r="{{pumpMessage['freshwaterPump'].isRunning}}" sp="{{pumpMessage['ballastdrillPump'].currentSpeed}}"
                     pump-name="{{pumpMessage['freshwaterPump'].pumpName}}">
 </ias-pump-component>
-
-
+<h2>液位高报警{{alarmMessage['bilge_001'].alarmClass}}</h2>
+<ias-level-alarm
+        alarm-class="{{alarmMessage['bilge_001'].alarmClass}}"
+        alarm-name="bilge_001">
+</ias-level-alarm>
 
 <!--&lt;!&ndash;//泵组件指令&ndash;&gt;-->
 <!--<div class="pump-component">-->
