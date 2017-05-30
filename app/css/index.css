@@ -1,12 +1,4 @@
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul,
-ol {
+* {
   margin: 0;
   padding: 0;
   font-size: 12px;
@@ -38,20 +30,6 @@ output {
   background-color: #000;
   display: inline-block;
 }
-
-.TK61-PS {
-  top: 300px;
-  left: 300px;
-}
-.freshwaterPump {
-  top: 100px;
-  left: 50px;
-}
-.fueloilPump {
-  top: 300px;
-  left: 50px;
-}
-
 .title-tag {
   width: 260px;
   background-color: #00275D;
@@ -83,26 +61,26 @@ output {
 .back-ahead .border:active {
   background-color: #00275D;
 }
-.back-ahead .path-back {
+.back-ahead .back {
   border: 2px solid #606060;
   padding: 5px;
   padding-right: 10px;
 }
-.back-ahead .path-back:hover {
+.back-ahead .back:hover {
   background-color: #aaa;
 }
-.back-ahead .path-back:active {
+.back-ahead .back:active {
   background-color: #00275D;
 }
-.back-ahead .path-ahead {
+.back-ahead .ahead {
   border: 2px solid #606060;
   padding: 5px;
   padding-left: 10px;
 }
-.back-ahead .path-ahead:hover {
+.back-ahead .ahead:hover {
   background-color: #aaa;
 }
-.back-ahead .path-ahead:active {
+.back-ahead .ahead:active {
   background-color: #00275D;
 }
 .tank {
@@ -190,23 +168,6 @@ output {
 .pump-component {
   position: absolute;
 }
-
-.level-alarm {
-  position: absolute;
-  top: 500px;
-  left: 100px;
-  width: 50px;
-  height: 50px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  background-color: red;
-}
-.level-alarm .cut-line {
-  height: 0;
-  width: 100%;
-  margin-top: 50%;
-  border: 1px solid #fff;
-=======
 .pump-component.ballastdrillPump {
   top: 300px;
   left: 300px;
@@ -214,7 +175,6 @@ output {
 .TK61-PS {
   top: 300px;
   left: 500px;
-
 }
 .ias {
   width: 1600px;
