@@ -10,9 +10,8 @@ iasApp.directive('iasTpl', function () {
         scope: {
             sysName: '@'
         },
-        template: '<div><div class="back-ahead"><a href class="path-back">《</a><a href class="path-ahead">》</a></div><div class="title-tag">{{sysName}}</div></div> ',
-        replace: true,
-        controller: 'iasTplCtrl'
+        template: '<div><div class="back-ahead"><a href class="back">《</a><a href class="ahead">》</a></div><div class="title-tag">{{sysName}}</div></div> ',
+        replace: true
     };
 });
 //舱室信息
@@ -83,17 +82,5 @@ iasApp.directive('iasPumpComponent', function () {
         templateUrl: 'app/templates/directiveTpl/iasPumpComponent.html',
         replace: true,
         controller: 'pumpComponentCtrl'
-    };
-});
-iasApp.directive('iasLevelAlarm', function () {
-    return {
-        restrict: 'EAC',
-        scope: {
-            alarmName: '@',
-            alarmClass: '@'
-        },
-        templateUrl: 'app/templates/directiveTpl/levelAlarm.html',
-        replace: true,
-        controller: ''
     };
 });

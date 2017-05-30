@@ -13,10 +13,6 @@ iasApp.controller('BallastDrillWCtrl', ['$scope', '$rootScope', function ($scope
 iasApp.controller('BilgeCtrl',['$scope', function ($scope) {
     console.log('BilgeCtrl')
 }])
-
-
-
-
 'use strict';
 
 /**
@@ -98,8 +94,6 @@ iasApp.controller('iasCtrl', ['$scope', '$rootScope', '$interval', function ($sc
     $interval(function () {
         $scope.systemTime = new Date();
     }, 1000);
-    //定义路径
-    $rootScope.path = [];
     //获取所有舱室信息
     $rootScope.getTankMessage = function () {
         $.ajax({
@@ -132,23 +126,7 @@ iasApp.controller('iasCtrl', ['$scope', '$rootScope', '$interval', function ($sc
             }
         });
     };
-    //获取所有报警点信息方法
-    $rootScope.getAlarmMessage = function () {
-        $.ajax({
-            url: 'app/data/getAlarmMessage.php',
-            success: function success(data) {
-                console.log('接收的报警点信息为：', data);
-                $rootScope.alarmMessage = [];
-                $(data).each(function (index, value) {
-                    $rootScope.alarmMessage[value.alarmName] = value;
-                });
-                console.log('处理后的报警点信息为：', $rootScope.alarmMessage);
-            },
-            error: function error(data) {
-                console.log('接收报警点信息失败：', data);
-            }
-        });
-    };
+
     //定义泵启停方法
     $rootScope.pumpIsRunningControl = function (e, isRunning) {
 
@@ -167,36 +145,8 @@ iasApp.controller('iasCtrl', ['$scope', '$rootScope', '$interval', function ($sc
         });
     };
     //定义调速停方法
-
-
     $rootScope.getPumpMessage();
     $rootScope.getTankMessage();
-    $rootScope.getAlarmMessage();
-}]);
-'use strict';
-
-/**
- * Created by Administrator on 2017/5/21.
- */
-iasApp.controller('iasTplCtrl', ['$scope', '$rootScope', function ($scope, $rootScope) {
-    console.log('iasTplCtrl');
-    $rootScope.$on('$stateChangeStart', function () {
-        console.log('state change start', $rootScope.path);
-    });
-    $rootScope.$on('$stateChangeSuccess', function () {
-        console.log(arguments);
-        $rootScope.path.push(0);
-        console.log('state change success', $rootScope.path);
-    });
-    $rootScope.$on('$stateChangeError', function () {
-        console.log('state change error', $rootScope.path);
-    });
-    $('.path-back').click(function () {
-        console.log('path-back', $rootScope.path);
-    });
-    $('.path-ahead').click(function () {
-        console.log('path-ahead', $rootScope.path);
-    });
 }]);
 'use strict';
 
