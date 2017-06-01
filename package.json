@@ -1,0 +1,33 @@
+{
+  "name": "iassystem",
+  "version": "1.0.0",
+  "description": "ias on board",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qianqiu992678/iassystem.git"
+  },
+  "keywords": [
+    "iassystem"
+  ],
+  "author": "yuguanqian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qianqiu992678/iassystem/issues"
+  },
+  "homepage": "https://github.com/qianqiu992678/iassystem#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^3.3.0"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
